@@ -1,0 +1,1 @@
+// program to check whether a given no. is amstrong no. or not

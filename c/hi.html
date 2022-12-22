@@ -1,0 +1,700 @@
+                                                
+                                                <!-- this script is provided by www.htmlbestcodes.com coded by: Kerixa Inc. -->
+                                                <!DOCTYPE html>
+                                                <html lang="en">
+                                                <head>
+                                                
+                                                    <meta charset="UTF-8">
+                                                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                                                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                                    <title>Custom Video Player</title>
+                                                
+                                                <!-- font awesome library include 4.7 -->
+                                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+                                                
+                                                <!-- css styles -->
+                                                <style>
+                                                
+                                                /* line 2, ../../../../loaders/scss/modules/_config.scss */
+                                                .loader6-shape-container, .loader6-shape-container > *:nth-of-type(1), .loader6-shape-container > *:nth-of-type(2), .loader6-shape-container > *:nth-of-type(3), .loader6-shape-container > *:nth-of-type(4), .loader6-shape-container > *:nth-of-type(5) {
+                                                  border-radius: 100%;
+                                                  position: absolute;
+                                                  top: 50%;
+                                                  left: 50%;
+                                                  z-index: 2000;
+                                                }
+                                                
+                                                /*
+                                                
+                                                For tints, calculate (255 - previous value), multiply that
+                                                by 1/4, 1/2, 3/4, etc. (the greater the factor, the lighter the tint),
+                                                and add that to the previous value (assuming each.component is a
+                                                8-bit integer).
+                                                */
+                                                /* line 2, ../../../../loaders/scss/partials/_container.scss */
+                                                .loader-container {
+                                                  position: fixed;
+                                                  width: 100%;
+                                                  height: 100%;
+                                                  top: 0;
+                                                  z-index: 1000;
+                                                }
+                                                
+                                                /* line 1, ../../../../loaders/scss/partials/_force-gpu.scss */
+                                                .force-gpu {
+                                                  -webkit-transform: translateZ(0);
+                                                  -moz-transform: translateZ(0);
+                                                  -ms-transform: translateZ(0);
+                                                  -o-transform: translateZ(0);
+                                                  transform: translateZ(0);
+                                                }
+                                                
+                                                /******************************** Config ********************************/
+                                                /* line 9, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                .loader6-shape-container > *:nth-of-type(1) {
+                                                  background-color: white;
+                                                  width: 16px;
+                                                  height: 16px;
+                                                  border: 2px white solid;
+                                                  margin: -10px 0px 0px -50px;
+                                                }
+                                                
+                                                /* line 9, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                .loader6-shape-container > *:nth-of-type(2) {
+                                                  background-color: white;
+                                                  width: 16px;
+                                                  height: 16px;
+                                                  border: 2px white solid;
+                                                  margin: -10px 0px 0px -50px;
+                                                }
+                                                
+                                                /* line 9, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                .loader6-shape-container > *:nth-of-type(3) {
+                                                  background-color: white;
+                                                  width: 16px;
+                                                  height: 16px;
+                                                  border: 2px white solid;
+                                                  margin: -10px 0px 0px -10px;
+                                                }
+                                                
+                                                /* line 9, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                .loader6-shape-container > *:nth-of-type(4) {
+                                                  background-color: white;
+                                                  width: 16px;
+                                                  height: 16px;
+                                                  border: 2px white solid;
+                                                  margin: -10px 0px 0px 30px;
+                                                }
+                                                
+                                                /* line 9, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                .loader6-shape-container > *:nth-of-type(5) {
+                                                  background-color: white;
+                                                  width: 16px;
+                                                  height: 16px;
+                                                  border: 2px white solid;
+                                                  margin: -10px 0px 0px 30px;
+                                                }
+                                                
+                                                /******************************** Animations ********************************/
+                                                /* line 192, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                .loader6-shape-container > *:nth-of-type(1) {
+                                                  animation: loader6-shape-animate-1 1s linear infinite;
+                                                }
+                                                
+                                                /* line 192, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                .loader6-shape-container > *:nth-of-type(2) {
+                                                  animation: loader6-shape-animate-2 1s linear infinite;
+                                                }
+                                                
+                                                /* line 192, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                .loader6-shape-container > *:nth-of-type(3) {
+                                                  animation: loader6-shape-animate-3 1s linear infinite;
+                                                }
+                                                
+                                                /* line 192, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                .loader6-shape-container > *:nth-of-type(4) {
+                                                  animation: loader6-shape-animate-4 1s linear infinite;
+                                                }
+                                                
+                                                /* line 192, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                .loader6-shape-container > *:nth-of-type(5) {
+                                                  animation: loader6-shape-animate-5 1s linear infinite;
+                                                }
+                                                
+                                                @-webkit-keyframes loader6-shape-animate-1 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(40px) scale(1, 1);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(80px) scale(1, 1);
+                                                  }
+                                                  80% {
+                                                    transform: translateX(80px) scale(0, 0);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                }
+                                                
+                                                @-moz-keyframes loader6-shape-animate-1 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(40px) scale(1, 1);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(80px) scale(1, 1);
+                                                  }
+                                                  80% {
+                                                    transform: translateX(80px) scale(0, 0);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                }
+                                                
+                                                @-ms-keyframes loader6-shape-animate-1 {
+                                                  /* line 268, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  0% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  /* line 273, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  20% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  /* line 280, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  40% {
+                                                    transform: translateX(40px) scale(1, 1);
+                                                  }
+                                                  /* line 280, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  60% {
+                                                    transform: translateX(80px) scale(1, 1);
+                                                  }
+                                                  /* line 292, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  80% {
+                                                    transform: translateX(80px) scale(0, 0);
+                                                  }
+                                                  /* line 292, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  100% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                }
+                                                
+                                                @-o-keyframes loader6-shape-animate-1 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(40px) scale(1, 1);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(80px) scale(1, 1);
+                                                  }
+                                                  80% {
+                                                    transform: translateX(80px) scale(0, 0);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                }
+                                                
+                                                @keyframes loader6-shape-animate-1 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(40px) scale(1, 1);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(80px) scale(1, 1);
+                                                  }
+                                                  80% {
+                                                    transform: translateX(80px) scale(0, 0);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                }
+                                                
+                                                @-webkit-keyframes loader6-shape-animate-2 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(40px) scale(1, 1);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(80px) scale(1, 1);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(80px) scale(0, 0);
+                                                  }
+                                                  80% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                }
+                                                
+                                                @-moz-keyframes loader6-shape-animate-2 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(40px) scale(1, 1);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(80px) scale(1, 1);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(80px) scale(0, 0);
+                                                  }
+                                                  80% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                }
+                                                
+                                                @-ms-keyframes loader6-shape-animate-2 {
+                                                  /* line 357, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  0% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  /* line 361, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  20% {
+                                                    transform: translateX(40px) scale(1, 1);
+                                                  }
+                                                  /* line 370, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  40% {
+                                                    transform: translateX(80px) scale(1, 1);
+                                                  }
+                                                  /* line 378, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  60% {
+                                                    transform: translateX(80px) scale(0, 0);
+                                                  }
+                                                  /* line 378, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  80% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  /* line 385, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  100% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                }
+                                                
+                                                @-o-keyframes loader6-shape-animate-2 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(40px) scale(1, 1);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(80px) scale(1, 1);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(80px) scale(0, 0);
+                                                  }
+                                                  80% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                }
+                                                
+                                                @keyframes loader6-shape-animate-2 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(40px) scale(1, 1);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(80px) scale(1, 1);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(80px) scale(0, 0);
+                                                  }
+                                                  80% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                }
+                                                
+                                                @-webkit-keyframes loader6-shape-animate-3 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(40px) scale(1, 1);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(40px) scale(0, 0);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(-40px) scale(0, 0);
+                                                  }
+                                                  80% {
+                                                    transform: translateX(-40px) scale(1, 1);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                }
+                                                
+                                                @-moz-keyframes loader6-shape-animate-3 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(40px) scale(1, 1);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(40px) scale(0, 0);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(-40px) scale(0, 0);
+                                                  }
+                                                  80% {
+                                                    transform: translateX(-40px) scale(1, 1);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                }
+                                                
+                                                @-ms-keyframes loader6-shape-animate-3 {
+                                                  /* line 357, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  0% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  /* line 361, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  20% {
+                                                    transform: translateX(40px) scale(1, 1);
+                                                  }
+                                                  /* line 378, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  40% {
+                                                    transform: translateX(40px) scale(0, 0);
+                                                  }
+                                                  /* line 378, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  60% {
+                                                    transform: translateX(-40px) scale(0, 0);
+                                                  }
+                                                  /* line 385, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  80% {
+                                                    transform: translateX(-40px) scale(1, 1);
+                                                  }
+                                                  /* line 392, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  100% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                }
+                                                
+                                                @-o-keyframes loader6-shape-animate-3 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(40px) scale(1, 1);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(40px) scale(0, 0);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(-40px) scale(0, 0);
+                                                  }
+                                                  80% {
+                                                    transform: translateX(-40px) scale(1, 1);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                }
+                                                
+                                                @keyframes loader6-shape-animate-3 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(40px) scale(1, 1);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(40px) scale(0, 0);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(-40px) scale(0, 0);
+                                                  }
+                                                  80% {
+                                                    transform: translateX(-40px) scale(1, 1);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                }
+                                                
+                                                @-webkit-keyframes loader6-shape-animate-4 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(-80px) scale(0, 0);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(-80px) scale(1, 1);
+                                                  }
+                                                  80% {
+                                                    transform: translateX(-40px) scale(1, 1);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                }
+                                                
+                                                @-moz-keyframes loader6-shape-animate-4 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(-80px) scale(0, 0);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(-80px) scale(1, 1);
+                                                  }
+                                                  80% {
+                                                    transform: translateX(-40px) scale(1, 1);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                }
+                                                
+                                                @-ms-keyframes loader6-shape-animate-4 {
+                                                  /* line 423, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  0% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  /* line 427, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  20% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  /* line 432, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  40% {
+                                                    transform: translateX(-80px) scale(0, 0);
+                                                  }
+                                                  /* line 437, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  60% {
+                                                    transform: translateX(-80px) scale(1, 1);
+                                                  }
+                                                  /* line 437, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  80% {
+                                                    transform: translateX(-40px) scale(1, 1);
+                                                  }
+                                                  /* line 437, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  100% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                }
+                                                
+                                                @-o-keyframes loader6-shape-animate-4 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(-80px) scale(0, 0);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(-80px) scale(1, 1);
+                                                  }
+                                                  80% {
+                                                    transform: translateX(-40px) scale(1, 1);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                }
+                                                
+                                                @keyframes loader6-shape-animate-4 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(-80px) scale(0, 0);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(-80px) scale(1, 1);
+  }
+                                                  80% {
+                                                    transform: translateX(-40px) scale(1, 1);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                }
+                                                
+                                                @-webkit-keyframes loader6-shape-animate-5 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(-80px) scale(0, 0);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(-80px) scale(1, 1);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(-40px) scale(1, 1);
+                                                  }
+                                                  80% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                }
+                                                
+                                                @-moz-keyframes loader6-shape-animate-5 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(-80px) scale(0, 0);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(-80px) scale(1, 1);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(-40px) scale(1, 1);
+                                                  }
+                                                  80% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                }
+                                                
+                                                @-ms-keyframes loader6-shape-animate-5 {
+                                                  /* line 475, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  0% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  /* line 479, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  20% {
+                                                    transform: translateX(-80px) scale(0, 0);
+                                                  }
+                                                  /* line 502, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  40% {
+                                                    transform: translateX(-80px) scale(1, 1);
+                                                  }
+                                                  /* line 486, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  60% {
+                                                    transform: translateX(-40px) scale(1, 1);
+                                                  }
+                                                  /* line 502, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  80% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  /* line 496, ../../../../loaders/scss/modules/mixins/_shape1_mixin.scss */
+                                                  100% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                }
+                                                
+                                                @-o-keyframes loader6-shape-animate-5 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(-80px) scale(0, 0);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(-80px) scale(1, 1);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(-40px) scale(1, 1);
+                                                  }
+                                                  80% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                }
+                                                
+                                                @keyframes loader6-shape-animate-5 {
+                                                  0% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                  20% {
+                                                    transform: translateX(-80px) scale(0, 0);
+                                                  }
+                                                  40% {
+                                                    transform: translateX(-80px) scale(1, 1);
+                                                  }
+                                                  60% {
+                                                    transform: translateX(-40px) scale(1, 1);
+                                                  }
+                                                  80% {
+                                                    transform: translateX(0px) scale(1, 1);
+                                                  }
+                                                  100% {
+                                                    transform: translateX(0px) scale(0, 0);
+                                                  }
+                                                }
+                                                
+                                                </style>
+                                                </head>
+                                                
+                                                <!--  style="background-color:#1D4A6B"-->
+                                                <body  style="background-color:#1D4A6B">
+                                                
+                                                
+                                                  <div class="loader-container force-gpu">
+                                                    <div class="loader6-shape-container">
+                                                
+                                                      <div></div>
+                                                      <div></div>
+                                                      <div></div>
+                                                      <div></div>
+                                                      <div></div>
+                                                
+                                                    </div>
+                                                  </div>
+                                                
+                                                </body>
+                                                </html><a target='_blank' href='www.htmlbestcodes.com' style='font-size: 8pt; text-decoration: none'>Html Best Codes</a>                                                
+                                                                                            
