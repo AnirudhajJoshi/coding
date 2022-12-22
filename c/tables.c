@@ -1,3 +1,4 @@
+//this c program will print tables
 #include <stdio.h>
 
 int main() {
